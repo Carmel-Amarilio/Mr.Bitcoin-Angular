@@ -1,0 +1,13 @@
+@import "../../../assets/scss/setup/variables";
+
+.contacts-index {
+    position: relative;
+
+    .add-btn {
+        position: fixed;
+        background-color: $mainClr;
+        bottom: 50px;
+        right:calc($mainMargin - 20px) ;
+        z-index: 10;
+    }
+}

@@ -9,13 +9,11 @@ import { BitcoinService } from '../../services/bitcoin.service';
 export class HomeComponent implements OnInit {
   rate: number | null = null;
 
-  constructor(private bitcoinService: BitcoinService) {} 
+  constructor(private bitcoinService: BitcoinService) {}
 
   async ngOnInit(): Promise<void> {
     try {
       this.rate = await this.bitcoinService.getRate();
-      console.log(this.rate);
-      
     } catch (error) {
       console.error('Error fetching Bitcoin rate:', error);
     }

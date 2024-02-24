@@ -1,0 +1,14 @@
+@import "../../../assets/scss/setup/variables";
+
+
+.contact-edit {
+  margin: auto;
+    max-width: 400px;
+    label {
+      width: 120px;
+    }
+    .save-btn {
+      background-color:$mainClr ;
+      width: 85%;
+    }
+  }

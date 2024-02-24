@@ -13,6 +13,8 @@ import { ContactFilterComponent } from './cmps/contact-filter/contact-filter.com
 import { HomeComponent } from './pages/home/home.component';
 import { ChartComponent } from './pages/chart/chart.component';
 import { GoogleChartsModule } from 'angular-google-charts';
+import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
+import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { GoogleChartsModule } from 'angular-google-charts';
     ContactPrevComponent,
     ContactFilterComponent,
     HomeComponent,
-    ChartComponent
+    ChartComponent,
+    ContactDetailsComponent,
+    ContactEditComponent
   ],
   imports: [
     BrowserModule,

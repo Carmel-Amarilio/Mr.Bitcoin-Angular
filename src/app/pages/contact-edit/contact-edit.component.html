@@ -1,0 +1,20 @@
+<section class="contact-edit">
+    <form (ngSubmit)="onSaveContact()" class="flex column align-center justify-center gap10">
+        <div class="flex gap10 align-center">
+            <label for="name">Name:</label>
+            <input [(ngModel)]="contact.name" type="text" name="name" id="name">
+        </div>
+
+        <div class="flex gap10 align-center">
+            <label for="email">Email:</label>
+            <input [(ngModel)]="contact.email" type="email" name="email" id="email">
+        </div>
+
+        <div class="flex gap10 align-center">
+            <label for="phone">Phone:</label>
+            <input [(ngModel)]="contact.phone" type="number" name="phone" id="phone">
+        </div>
+
+        <button class="save-btn">Save</button>
+    </form>
+</section>

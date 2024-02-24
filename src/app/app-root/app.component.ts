@@ -10,7 +10,7 @@ import { take } from 'rxjs';
 export class AppComponent {
   constructor(private contactService: ContactService) { }
   title = 'mr-bitcoin';
-  currCmp: string = 'home';
+  // currCmp: string = 'home';
 
     ngOnInit(): void {
         this.contactService.loadContacts()
@@ -20,7 +20,7 @@ export class AppComponent {
             })
     }
 
-  handleHeaderEvent(to: string) {
-    this.currCmp = to;
-  }
+  // handleHeaderEvent(to: string) {
+  //   this.currCmp = to;
+  // }
 }

@@ -1,11 +1,16 @@
 <header class="main-container full ">
     <section class="flex space-between">
-        <h1>Mr.BitCoin</h1>
+        <h1 routerLink="/home">Mr.BitCoin</h1>
         
         <nav class="flex gap10">
-            <button (click)="onNav('home')">Home</button>
+            <button routerLink="/home" >Home</button>
+            <button routerLink="/contact" >Contacts</button>
+            <button routerLink="/chart" >Chart</button>
+        </nav>
+        <!-- <nav class="flex gap10">
+            <button (click)="onNav('home')" >Home</button>
             <button (click)="onNav('contacts')">Contacts</button>
             <button (click)="onNav('chart')">Chart</button>
-        </nav>
+        </nav> -->
     </section>
 </header>
