@@ -1,0 +1,8 @@
+<section>
+    <app-header (navTo)="handleHeaderEvent($event)"/>
+    <main class="main-container">
+        <home *ngIf="currCmp === 'home'"/>
+        <contact-index *ngIf="currCmp === 'contacts'"/>
+        <chart *ngIf="currCmp === 'chart'"/>
+    </main>
+</section>

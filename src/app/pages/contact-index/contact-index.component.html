@@ -1,0 +1,4 @@
+<section *ngIf="contacts$ | async as contacts" class="contacts-index">
+	<contact-filter />
+	<contact-list (remove)="onRemoveContact($event)" [contacts]="contacts" />
+</section>

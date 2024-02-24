@@ -1,0 +1,9 @@
+<section class="flex column gap20 align-center">
+    <google-chart *ngIf="chart1.data" [title]="chart1.title" [type]="chart1.type" [data]="chart1.data"
+        [columns]="chart1.columnNames">
+    </google-chart>
+
+    <google-chart *ngIf="chart2.data" [title]="chart2.title" [type]="chart2.type" [data]="chart2.data"
+        [columns]="chart2.columnNames">
+    </google-chart>
+</section>

@@ -1,0 +1,3 @@
+<section class="contact-list card-grid">
+    <contact-prev (remove)="remove.emit($event)" *ngFor="let contact of contacts" [contact]="contact"/>
+</section>

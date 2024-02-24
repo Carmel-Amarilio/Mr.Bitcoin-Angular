@@ -1,0 +1,91 @@
+button {
+    margin: 0;
+    border: 0;
+    border-radius: 15px;
+    background-color: $BGC1;
+    color: $txtClr1;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: workSans;
+    transition: transform 0.3s ease-in-out;
+
+
+    &.form-btn {
+        background-color: $btnClr;
+    }
+
+    &.underline-btn {
+        border: 2px solid $btnClr;
+        width: 200px;
+    }
+
+    &:hover {
+        transform: scale(0.9);
+    }
+}
+
+.recipes-card {
+    position: relative;
+    background-color: $BGC1;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+    img {
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .recipes-details {
+        padding: 20px;
+
+        h4 {
+            font-size: 1.375em;
+        }
+    }
+
+    .like {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: rgba(240, 248, 255, 0);
+
+        img {
+            width: 26px !important;
+            height: 26px !important;
+        }
+
+        &:hover {
+            transform: scale(0.8);
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0 15px 15px #f5f5f515;
+    }
+}
+
+
+.mini-profile {
+    width: 24px;
+}
+
+.no-profile {
+   font-size: 90px;
+   margin: auto;
+   text-align: center;
+   background-color: $txtClr3;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+}
+
+.mini-no-profile {
+   font-size: 20px;
+   text-align: center;
+   background-color: $BGC2;
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+}
+
