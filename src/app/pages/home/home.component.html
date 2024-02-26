@@ -1,6 +1,33 @@
 <section class="home">
-    <section>
-        <h2 *ngIf="rate">Bitcoin to USD rate is {{ rate }} </h2>
+    <section *ngIf="loggedInUser$| async as loggedInUser"  class="flex column gap20">
+        <article class="user-area flex column gap20">
+            <h2>Welcome {{ loggedInUser.name }}</h2>
+            <h2>Your balance is {{ loggedInUser.balance }}</h2>
+            <h3 *ngIf="rate">Bitcoin to USD rate is {{ rate }}</h3>
+            <button (click)="onLogOut()" class="log-out-btn">Log out</button>
+        </article>
+
+        <article class="transactions">
+            <h2>transactions:</h2>
+            <table>
+                <tbody>
+                    <tr *ngFor="let transaction of loggedInUser.transactions">
+                        <td>{{ transaction.to }}</td>
+                        <td>{{ transaction.amount }}</td>
+                        <td>{{ formTime(transaction.at) }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
     </section>
+
+    <form *ngIf="!(loggedInUser$ | async)" (ngSubmit)="onLogIn()" class="flex column align-center justify-center gap10">
+        <div class="flex gap10 align-center">
+            <label for="name">Log In:</label>
+            <input [(ngModel)]="name" type="text" name="name" id="name">
+        </div>
+
+        <button class="log-in-btn">Log In</button>
+    </form>
 
 </section>

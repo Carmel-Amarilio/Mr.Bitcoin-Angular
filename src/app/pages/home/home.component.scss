@@ -1,0 +1,30 @@
+@import "../../../assets/scss/setup/variables";
+
+.home {
+  .user-area {
+    padding: 30px;
+    background-color: #3b3b3b;
+    border-radius: 20px;
+
+  }
+
+  .transactions {
+    table {
+      width: 100%;
+      padding-block: 20px;
+
+      td {
+        padding: 10px;
+
+        &:not(:first-child) {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+
+  .log-in-btn {
+    background-color: $mainClr;
+  }
+}

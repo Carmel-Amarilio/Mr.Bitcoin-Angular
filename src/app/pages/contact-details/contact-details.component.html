@@ -3,5 +3,12 @@
     <h2>{{ contact.name }}</h2>
     <h3>{{ contact.email }}</h3>
     <h3>{{ contact.phone }}</h3>
+    <button (click)="onTransfer()" class="transfer-btn">Transfer</button>
     <button [routerLink]="['/edit', contact._id]" class="edit-btn">Edit</button>
+
+    <form *ngIf="isTransfer" class="transfer flex align-center gap20" (ngSubmit)="onSend()">
+        <input type="number" [(ngModel)]="transferAmount" name="transferAmount" placeholder="Enter transfer amount" />
+        <button type="submit">send</button>
+    </form>
+    
 </section>
